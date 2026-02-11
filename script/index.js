@@ -17,6 +17,23 @@ const displayLevelWord = (words) =>{
 const wordContainer = document.getElementById("word-Container");
 wordContainer.innerHTML = "";
 
+// lesson-4 gele nicher kaj gulo hobe
+if(words.length == 0){
+    wordContainer.innerHTML = `
+     <div class="text-center bg-sky-100  col-span-full rounded-xl py-10 space-y-6  font-bangla">
+       
+   <img class="mx-auto" src="assets/alert-error.png" alt="">
+     <p class="text-xl font-medium text-gray-400">
+        এই lesson এ এখনো কোন vocabuleary যুক্ত করা হয়নি ।
+        </p>
+        
+        <h2 class="font-bold text-3xl">নেক্সট Lesson এ যান । </h2>
+
+    </div>
+    
+    `
+}
+
 words.forEach((word) => {
     // console.log(word);
     const card = document.createElement("div")
